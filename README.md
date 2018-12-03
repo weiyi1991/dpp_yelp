@@ -16,4 +16,4 @@ The YELP dataset provides millions of reviews for the restaurant. We are curious
 
 ### Usage Instruction
 1. Download the Yelp dataset. extract all the files to `dataset/`
-2.
+2. Extract the users records that has `'friends'`, which are `879891` in total. Take small part of them for our project?
