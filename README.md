@@ -16,4 +16,8 @@ The YELP dataset provides millions of reviews for the restaurant. We are curious
 
 ### Usage Instruction
 1. Download the Yelp dataset. extract all the files to `dataset/`
-2. Extract the users records that has `'friends'`, which are `879891` in total. Take small part of them for our project?
+2. Extract the users records that has `'friends'`, which are `879891` in total. Take users with 5-10 friends
+3. Business to category `'RestaurantsPriceRange2'`
+4. Review that contains the bus_id and user_id in our selected records.
+5. Features: average_stars in the review.json, number of friend reviews for the business category, average price range of a restaurant category your friends reviewed, highest number of review friend rating, friend rating who has the highest useful count, friend rating who has the most fans.
+6. Labels: compute average rating of that user on a specific category, if >3.0, mark as `Ture`.
