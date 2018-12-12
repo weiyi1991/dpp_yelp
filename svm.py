@@ -22,8 +22,8 @@ with open(feature_json, 'r') as f:
         labels[idx] = data['label']
 
 # define classifiers without feature scaling
-linear_svm = svm.SVC(kernel='linear', C=2)
-rbf_svm = svm.SVC(kernel='rbf', C=2)
+linear_svm = svm.SVC(kernel='linear', C=2, class_weight={0:2,1:1})
+rbf_svm = svm.SVC(kernel='rbf', C=2, class_weight={0:2,1:1})
 # classifier with standard scaling on features
 linear_svm_scale = make_pipeline(preprocessing.StandardScaler(), svm.SVC(kernel='linear', C=2))
 rbf_svm_scale = make_pipeline(preprocessing.StandardScaler(), svm.SVC(C=2))
