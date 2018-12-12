@@ -47,26 +47,24 @@ def main():
 	X,Y = importdata(in_file) 
 	
 	acc_scores_GB_un,f1_scores_GB_un  = train_using_Gaussian_bayesian(X, Y, 'un') 
-	print("Mean of accurate Gaussian bayesian using unprocessed data: {:.2f} (+/-: {:.2f})"
-		.format(acc_scores_GB_un.mean(),acc_scores_GB_un.std()),end="\n\n" )
+	print "Mean of accurate Gaussian bayesian using unprocessed data: %0.2f (+/- %0.2f)" % (acc_scores_GB_un.mean(), acc_scores_GB_un.std()) 
 				
-	print("Mean of F1 score using Gaussian bayesian using unprocessed data: {:.2f} (+/-: {:.2f})"
-		.format(f1_scores_GB_un.mean(),f1_scores_GB_un.std()),end="\n\n" )
+	print "Mean of F1 score using Gaussian bayesian using unprocessed data: %0.2f (+/- %0.2f)" % (f1_scores_GB_un.mean(), f1_scores_GB_un.std()) 
 				
 				
-	acc_scores_GB_normal,f1_scores_GB_normal  = train_using_Gaussian_bayesian(X, Y, 'normal') 
-	print("Mean of accurate Gaussian bayesian using normal scaled data: {:.2f} (+/-: {:.2f})"
-		.format(acc_scores_GB_normal.mean(),acc_scores_GB_normal.std()),end="\n\n" )
+	# acc_scores_GB_normal,f1_scores_GB_normal  = train_using_Gaussian_bayesian(X, Y, 'normal') 
+	# print("Mean of accurate Gaussian bayesian using normal scaled data: {:.2f} (+/-: {:.2f})"
+		# .format(acc_scores_GB_normal.mean(),acc_scores_GB_normal.std()),end="\n\n" )
 				
-	print("Mean of F1 score using Gaussian bayesian using normal scaled data:{:.2f} (+/-: {:.2f})"
-		.format(f1_scores_GB_normal.mean(),f1_scores_GB_normal.std()),end="\n\n" )
+	# print("Mean of F1 score using Gaussian bayesian using normal scaled data:{:.2f} (+/-: {:.2f})"
+		# .format(f1_scores_GB_normal.mean(),f1_scores_GB_normal.std()),end="\n\n" )
 
-	acc_scores_GB_minmax,f1_scores_GB_minmax  = train_using_Gaussian_bayesian(X, Y, 'minmax') 
-	print("Mean of accurate Gaussian bayesian using minmax scaled data: {:.2f} (+/-: {:.2f})"
-		.format(acc_scores_GB_minmax.mean(),acc_scores_GB_minmax.std()),end="\n\n" )
+	# acc_scores_GB_minmax,f1_scores_GB_minmax  = train_using_Gaussian_bayesian(X, Y, 'minmax') 
+	# print("Mean of accurate Gaussian bayesian using minmax scaled data: {:.2f} (+/-: {:.2f})"
+		# .format(acc_scores_GB_minmax.mean(),acc_scores_GB_minmax.std()),end="\n\n" )
 				
-	print("Mean of F1 score using Gaussian bayesian using minmax scaled data: {:.2f} (+/-: {:.2f})"
-		.format(f1_scores_GB_minmax.mean(),f1_scores_GB_normal.std()),end="\n\n" )				
+	# print("Mean of F1 score using Gaussian bayesian using minmax scaled data: {:.2f} (+/-: {:.2f})"
+		# .format(f1_scores_GB_minmax.mean(),f1_scores_GB_normal.std()),end="\n\n" )				
 
 if __name__=="__main__": 
 	main() 
